@@ -1,0 +1,26 @@
+<div class="videos">
+  <div class="webcam-video">
+    <h2>Local Video</h2>
+    <video autoplay playsinline id="webcamVideo" #localVideo></video>
+  </div>
+  <div class="remote-video">
+    <h2>Remote video</h2>
+    <video id="remoteVideo" autoplay playsinline #remoteVideo></video>
+  </div>
+</div>
+<div class="actions">
+  <div class="start-video" *ngIf="!callStarted">
+    <h2>Start video</h2>
+    <button (click)="webcamButton()">Start webcam</button>
+  </div>
+
+  <h2>Create a new call</h2>
+  <button id="callButton" (click)="callButtonClick()">Call</button>
+
+  <h2>Join a call</h2>
+
+  <input [(ngModel)]="callInput" id="callInput" />
+  <button id="answerButton" (click)="answerButton()">Answer</button>
+  <h2>Hang Up</h2>
+  <button id="hangupButton" (click)="hangUpCall()">Hang up</button>
+</div>

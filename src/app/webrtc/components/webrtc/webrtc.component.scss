@@ -1,0 +1,9 @@
+.videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.webcam-video,
+.remote-video {
+  text-align: center;
+}
